@@ -29,7 +29,7 @@ section:nth-child(2) ul li a::after {
   content: '';
   width: 20px;
   height: 30px;
-  background-image: url(img/Group\ 75.svg);
+  background-image: url('Group 75.svg');
   display: inline-block;
   background-repeat: no-repeat;
   vertical-align: middle;
