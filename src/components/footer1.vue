@@ -11,11 +11,11 @@
       <h4>Link-uri de interes</h4>
       <br />
       <ul class="listalink">
-        <li><a href="#">Meniu</a></li>
+        <li><a href="App.vue">Meniu</a></li>
         <li><a href="#">Acasă</a></li>
         <li><a href="#">Sursele Locale</a></li>
         <li><a href="#">Despre noi</a></li>
-        <li><a href="#">Comanda ta</a></li>
+        <li><a href="Cart.vue">Comanda ta</a></li>
       </ul>
     </div>
     <div class="contacts">
@@ -93,7 +93,7 @@ footer {
   content: '';
   width: 20px;
   height: 20px;
-  background-image: url('img/Frame 42.svg');
+  background-image: url('Frame 42.svg');
   display: inline-block;
   background-repeat: no-repeat;
   vertical-align: middle;

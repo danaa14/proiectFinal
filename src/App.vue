@@ -1,21 +1,9 @@
 <script setup>
-import header1 from './components/header1.vue'
-import tabs from './components/tabs.vue'
-import sections from './components/sections.vue'
-import footer1 from './components/footer1.vue'
+import { RouterView } from 'vue-router'
 </script>
 
 <template>
-  <div>
-    <header1 />
-    <tabs />
-    <sections />
-    <footer1 />
-  </div>
+  <RouterView />
 </template>
 
-<style scoped>
-div {
-  margin: 0;
-}
-</style>
+<style scoped></style>

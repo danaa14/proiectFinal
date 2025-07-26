@@ -5,11 +5,19 @@
     <h1>Ratatouille</h1>
     <nav>
       <ul>
-        <li><a href="#">Acasă</a></li>
-        <li><a href="#">Despre noi</a></li>
-        <li><a href="#">Recenzii</a></li>
-        <li><a href="#" class="menu">Meniu</a></li>
-        <li><a href="comanda.html" class="menu">Comanda ta</a></li>
+        <li><a href="">Acasă</a></li>
+        <li><a href="">Despre noi</a></li>
+        <li><a href="">Recenzii</a></li>
+        <li>
+          <router-link to="/menu">
+            <a href="#" class="menu">Meniu</a>
+          </router-link>
+        </li>
+        <li>
+          <router-link to="/cart">
+            <a class="menu"> Comanda ta</a>
+          </router-link>
+        </li>
       </ul>
     </nav>
   </header>
