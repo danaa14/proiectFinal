@@ -13,13 +13,13 @@ const filteredSections = computed(() => props.sectiuni.filter((item) => !item.is
 </script>
 
 <template>
-  <section class="arome-clasice">
-    <div class="numele" v-if="sectiuni[0]?.isTitle">
-      <h2>{{ sectiuni[0].title }}</h2>
-    </div>
-  </section>
-
   <section class="arome-clasice2">
+    <div class="arome-clasice">
+      <div class="numele" v-if="sectiuni[0]?.isTitle">
+        <h2>{{ sectiuni[0].title }}</h2>
+      </div>
+    </div>
+
     <part1 v-for="(sectiune, index) in filteredSections" :key="index" :sectiune="sectiune" />
   </section>
 </template>
