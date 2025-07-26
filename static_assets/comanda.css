@@ -6,10 +6,15 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  align-self: center;
 }
 
 /*HEADER*/
+
+.comanda {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
 
 header {
   width: 100%;
@@ -139,12 +144,14 @@ body {
 
 .info-produs {
   width: 295px;
-  height: 166px;
+  height: 176px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-content: center;
 }
+
+
 
 .info-produs p,
 h2 {
@@ -188,7 +195,7 @@ button:hover {
 }
 
 h2 {
-  font-size: 40px;
+  font-size: 30px;
   font-family: 'Yeseva One';
   font-weight: 400;
 }
@@ -200,9 +207,8 @@ h2 {
 }
 
 .list {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: repeat(5, 1fr);
+  display: flex;
+  flex-direction: column;
   gap: 100px;
 }
 
@@ -215,92 +221,80 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: center;
+   margin-top:57px;
 }
 
-.comanda {
-  width: 503px;
-  height: 469px;
+.bon p{
+    text-align: center;
+    font-family: "Wittgenstein";
+    font-weight: 100;
+    font-size:35px;
+    
 }
 
-hr {
-  width: 368px;
-  border: 2;
-  margin-left: 114px;
+.Comanda1 input{
+    background-color: transparent;
+    border:none;
+    border-bottom: 1px solid black;
+  margin-left: 28px;
+  width:380px;
+  height:64px;
+ 
+    
 }
 
 .produse {
   display: flex;
-  flex-direction: row;
-  width: 100%;
-  max-width: 1216px;
-  margin: 0 auto;
-  padding: 0 16px;
-  gap: 40px;
-}
-
-.element {
-  width: 609px;
-}
-
-.element p {
-  text-align: center;
-  margin-bottom: 36px;
+  align-items: flex-start;
+  gap: 104px;
 }
 
 .start {
   display: flex;
   flex-direction: row;
-  vertical-align: middle;
-}
-
-.start img {
-  margin: 101px 250px 125px 344px;
+  align-items: center;
+  height: 74px;
+  text-align: center;
+  margin: 108px auto;
 }
 
 .start h1 {
   font-size: 64px;
   font-family: 'yeseva one';
   font-weight: 100;
-  margin-left: 210px;
-  margin-bottom: 25px;
+  width: 400px;
+  margin: auto;
 }
 
-.Comanda1 input {
-  margin-left: 28px;
-}
-.comanda hr {
-  margin-left: 114px;
-  width: 250px;
-  margin-left: auto;
-  margin-right: 30px;
-}
 
-.Comanda1 input {
-  background-color: #ccc8bd;
-  border: none;
-}
+
+
 
 .comentarii p {
   font-size: 18px;
   font-weight: 100;
   text-align: left;
-  margin-left: 127px;
+    margin-left: 30px;
+    color:#7e7a7a;
+    margin-top: 64px;
+    margin-bottom: 18px;
 }
 
 .comentarii input {
   border-radius: 50px;
-  width: 386px;
+  width: 486px;
   height: 243px;
-  margin-left: 127px;
+margin-left: 30px;
   background-color: #ccc8bd;
   border: 0.5 solid #474444;
 }
 
 .comentarii button {
   border-radius: 10px;
-  width: 386px;
+  width: 486px;
   height: 66px;
-  margin-left: 127px;
+ margin-left:30px;
+ margin-top: 30px;
   background-color: #d1963f;
   border: none;
   transition: color 0.3s ease;
@@ -328,6 +322,7 @@ footer {
   align-content: stretch;
   justify-content: space-evenly;
   align-items: center;
+  margin-top:300px;
 }
 
 .logo h4 {

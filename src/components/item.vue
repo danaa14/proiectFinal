@@ -6,6 +6,16 @@ const props = defineProps({
     default: () => ({}),
   },
 })
+
+const counter = ref(1)
+
+const increase = () => {
+  counter.value += 1
+}
+
+const decrease = () => {
+  counter.value -= 1
+}
 </script>
 <template>
   <div class="list">
@@ -15,9 +25,9 @@ const props = defineProps({
         <h2>{{ items.title }}</h2>
         <p>{{ items.price }} lei</p>
         <div class="buttons">
-          <button>-</button>
-          <button>2</button>
-          <button>+</button>
+          <button @click="increase">-</button>
+          <button>{{ counter }}</button>
+          <button @click="decrease">+</button>
           <button>
             <img src="/public/cos.svg" />
           </button>
