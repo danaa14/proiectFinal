@@ -10,7 +10,15 @@ const props = defineProps({
 </script>
 <template>
   <section class="container">
-    <item v-for="(item, index) in items" :key="index" :item="item" />
+    <div class="list">
+      <item v-for="(item, index) in items" :key="index" :item="item" />
+    </div>
   </section>
 </template>
-<style scoped></style>
+<style scoped>
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+</style>

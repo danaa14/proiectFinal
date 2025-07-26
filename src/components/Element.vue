@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from 'vue'
+import list from './list.vue'
 
 const items = ref([
   {
@@ -23,6 +24,8 @@ const items = ref([
     price: 310,
   },
 ])
+
+
 </script>
 
 <template>

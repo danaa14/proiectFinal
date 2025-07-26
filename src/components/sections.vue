@@ -24,4 +24,28 @@ const filteredSections = computed(() => props.sectiuni.filter((item) => !item.is
   </section>
 </template>
 
-<style scoped></style>
+<style scoped>
+.arome-clasice2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 80px;
+  row-gap: 168px;
+  max-width: 1216px;
+  margin: 120px auto;
+}
+
+.arome-clasice {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.numele h2 {
+  font-family: 'Yeseva one';
+  font-size: 64px;
+  font-weight: 100;
+  margin-top: 130px;
+  display: flex;
+  align-items: center;
+}
+</style>
