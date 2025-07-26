@@ -64,4 +64,6 @@ const sectiuni = ref([
   <sections :sectiuni="sectiuni" />
 </template>
 
-<style scoped></style>
+<style scoped>
+
+</style>
