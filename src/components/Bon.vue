@@ -1,13 +1,15 @@
 <script setup>
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
 import emailjs from '@emailjs/browser';
 import Item from './item.vue';
 emailjs.init("MW5PkzCr8mhgdnjn3");
 
-const email = ref(null)
-const name= ref(null)
-const phone = ref(null)
-const address = ref(null)
+const email = ref(null);
+const name = ref(null);
+const phone = ref(null);
+const address = ref(null);
+
+const totalPrice = ref(0);
 
 const sendEmail = () => {
   const serviceID = 'service_n28qpnq';
@@ -34,13 +36,22 @@ const sendEmail = () => {
 };
 
 onMounted(() => {
-  
+  const cart = JSON.parse(localStorage.getItem('cart'));
+
+  const prices = cart.map(item => {
+    return item.quantity * item.produs.price
+  })
+
+  totalPrice.value = prices.reduce(
+    (accumulator, currentValue) => accumulator + currentValue,
+    0,
+  );
 })
 </script>
 
 <template>
   <div class="bon">
-    <p>Spre Achitare: {{ total }} lei</p>
+    <p>Spre Achitare: {{ totalPrice }} lei</p>
 
     <div class="comanda">
       <div class="Comanda1">
@@ -77,8 +88,6 @@ onMounted(() => {
   font-weight: 100;
   font-size: 35px;
 }
-
-
 
 .comentarii p {
   font-size: 18px;
@@ -135,7 +144,7 @@ onMounted(() => {
   align-items: center;
   justify-content: center;
   margin-top: 57px;
-  
+
 }
 
 .comanda {

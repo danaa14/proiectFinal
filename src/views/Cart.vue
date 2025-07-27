@@ -12,7 +12,7 @@ const deleteItemHandler = (index) => {
 }
 
 onMounted(() => {
-  comenzi.value = JSON.parse(localStorage.getItem('cart'));;
+  comenzi.value = JSON.parse(localStorage.getItem('cart'));
 })
 </script>
 
@@ -20,7 +20,7 @@ onMounted(() => {
   <Layout>
     <start />
     <div class="produse container">
-      <Element :comenzi="comenzi" @delete-item="deleteItemHandler"/>
+      <Element :comenzi="comenzi" @delete-item="deleteItemHandler" />
 
       <Bon :comenzi="comenzi" />
     </div>

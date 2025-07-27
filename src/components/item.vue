@@ -23,6 +23,7 @@ const increase = () => {
 
 const decrease = () => {
   if (counter.value === 0) {
+
   } else {
     counter.value -= 1
   }
