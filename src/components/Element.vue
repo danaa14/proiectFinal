@@ -1,33 +1,35 @@
 <script setup>
-import { ref } from 'vue'
+import Item from './item.vue'
 
-const items = ref([
-  {
-    title: 'Ricotta Crisp',
-    image: '/public/image 20.svg',
-    price: 75,
-  },
-  {
-    title: 'Sarmale',
-    image: '/public/img2.svg',
-    price: 45,
-  },
-  {
-    title: 'Vegan Pizza Mix',
-    image: '/public/img3.svg',
-    price: 180,
-  },
-  {
-    title: 'Mini Tarts Box',
-    image: '/public/img4.svg',
-    price: 310,
-  },
-])
+const props = defineProps({
+  comenzi: {
+    type: Array,
+    default: []
+  }
+})
+
+const emit = defineEmits(['delete.item'])
+
+const deleteItemHandler = (index) => {
+    emit('delete-item', index)
+}
+
 </script>
 
 <template>
   <div class="element">
-    <list :items="items" />
+   <section class="container">
+    <div class="list">
+      <item v-for="(item, index) in comenzi" :key="index" :item="item.produs"  @delete-item="() => deleteItemHandler(index)"/>
+    </div>
+  </section>
   </div>
 </template>
-<style scoped></style>
+
+<style scoped>
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+</style>

@@ -45,6 +45,7 @@ footer {
   align-content: stretch;
   justify-content: space-evenly;
   align-items: center;
+  margin-top: 150px;
 }
 
 .logo h4 {
@@ -115,6 +116,7 @@ footer {
   font-size: 24px;
   font-family: 'Wittgenstein';
   font-weight: 100;
+  color: gray;
 }
 
 .contacts li {
